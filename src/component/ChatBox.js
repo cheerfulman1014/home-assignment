@@ -6,7 +6,7 @@ import logo from '../logo.svg';
 import { Widget, addResponseMessage } from 'react-chat-widget';
 
 const ChatBox = ({ apiKey }) => {
-  const [message, _] = useState(
+  const [message, setMessage] = useState(
     new Message(constants)
   );
 
@@ -16,8 +16,9 @@ const ChatBox = ({ apiKey }) => {
   const openai = new OpenAIApi(configuration);
 
   useEffect(() => {
+    setMessage(new Message(constants));
     addResponseMessage('Welcome to this awesome chat!');
-  }, []);
+  }, [setMessage]);
   
   const handleNewUserMessage = async (newMessage) => {
     let correction = new Promise((resolve) => resolve(newMessage));
