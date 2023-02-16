@@ -6,7 +6,7 @@ import logo from '../logo.svg';
 import { Widget, addResponseMessage } from 'react-chat-widget';
 
 const ChatBox = ({ apiKey }) => {
-  const [message, setMessage] = useState(
+  const [message, _] = useState(
     new Message(constants)
   );
 
