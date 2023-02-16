@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import 'react-chat-widget/lib/styles.css';
 import ChatBox from './component/ChatBox';
