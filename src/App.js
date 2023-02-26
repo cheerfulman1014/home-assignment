@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Home Assignment for Vistendo</h1>
+      <h1>Test Project</h1>
       {
         start ? 
           <ChatBox apiKey={apiKey}/>
